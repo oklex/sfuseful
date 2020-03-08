@@ -1,14 +1,16 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Helmet from "react-helmet";
 import "./App.scss";
 import Error404 from "../Error404/Error404";
+import Contact from "../Contact/Contact";
+import SearchList from "../SearchList/SearchList";
 
 class App extends React.Component<{}, {}> {
   showServicesList = () => {
     return (
       <div>
-        <h1>list here</h1>
+        <SearchList />
       </div>
     );
   };
@@ -16,10 +18,10 @@ class App extends React.Component<{}, {}> {
   showContact = () => {
     return (
       <div>
-        <h1>contact us</h1>
+        <Contact />
       </div>
-    )
-  }
+    );
+  };
 
   show404 = () => {
     return (
@@ -40,6 +42,13 @@ class App extends React.Component<{}, {}> {
               content="width=device-width, initial-scale=1.0"
             />
           </Helmet>
+          <Link to={"/"}>
+            <h1>SFUseful</h1>
+          </Link>
+          <Link to={"/contact"}>
+            <p>contact us</p>
+          </Link>
+
           <Switch>
             <Route exact path="/" component={this.showServicesList} />
             <Route exact path="/contact" component={this.showContact} />
