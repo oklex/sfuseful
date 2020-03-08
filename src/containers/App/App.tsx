@@ -42,12 +42,14 @@ class App extends React.Component<{}, {}> {
               content="width=device-width, initial-scale=1.0"
             />
           </Helmet>
-          <Link to={"/"}>
-            <h1>SFUseful</h1>
-          </Link>
-          <Link to={"/contact"}>
-            <p>contact us</p>
-          </Link>
+          <div className="navigation">
+            <Link to={"/"} className="navigation-item">
+              <h1>SFUseful</h1>
+            </Link>
+            <Link to={"/contact"} className="navigation-item">
+              <p>contact us</p>
+            </Link>
+          </div>
 
           <Switch>
             <Route exact path="/" component={this.showServicesList} />
