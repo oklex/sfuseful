@@ -42,11 +42,12 @@ class App extends React.Component<{}, {}> {
               content="width=device-width, initial-scale=1.0"
             />
           </Helmet>
-          <div className="navigation">
-            <Link to={"/"} className="navigation-item">
+
+          <div className="navigation d-flex justify-content-between">
+            <Link to={"/"}>
               <h1>SFUseful</h1>
             </Link>
-            <Link to={"/contact"} className="navigation-item">
+            <Link to={"/contact"} className="nav-item">
               <p>contact us</p>
             </Link>
           </div>
