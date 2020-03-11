@@ -9,7 +9,7 @@ export interface IService {
 }
 
 export enum IDepartments {
-    Beedie = "Beedie",
+    Beedie = "Beedie School of Business",
     CompSci = "Computing Science",
     Engineering = "Enginering Science",
     HealthSci = "Health Sciences",
