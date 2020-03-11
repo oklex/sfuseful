@@ -1,5 +1,6 @@
 import React from "react";
 import IService from "../../models/services";
+import './SingleService.scss'
 
 interface ISingleServiceProps {
   service: IService;

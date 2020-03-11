@@ -14,7 +14,7 @@ class SearchList extends React.Component<ISearchListProps, {}> {
 
   showSingleService = (service: IService, index: number) => {
     return (
-      <div key={index} className='col-md-3'>
+      <div key={index} className='col-md-4 searchItem'>
         <SingleService service={service} />
       </div>
     );

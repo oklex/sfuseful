@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Helmet from "react-helmet";
 import "./App.scss";
 import Error404 from "../Error404/Error404";
