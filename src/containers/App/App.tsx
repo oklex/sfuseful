@@ -6,6 +6,7 @@ import Error404 from "../Error404/Error404";
 import Contact from "../Contact/Contact";
 import SearchList from "../SearchList/SearchList";
 import mockData from "../../data/mockData";
+import SuperNavigation from "../../components/Navigation/SuperNavigation";
 
 class App extends React.Component<{}, {}> {
   showServicesList = () => {
@@ -43,15 +44,7 @@ class App extends React.Component<{}, {}> {
               content="width=device-width, initial-scale=1.0"
             />
           </Helmet>
-
-          <div className="navigation d-flex justify-content-between">
-            <Link to={"/"}>
-              <h1>SFUseful</h1>
-            </Link>
-            <Link to={"/contact"} className="nav-item">
-              <p>contact us</p>
-            </Link>
-          </div>
+          <SuperNavigation />
 
           <Switch>
             <Route exact path="/" component={this.showServicesList} />
