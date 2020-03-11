@@ -1,6 +1,6 @@
-import {IService, IDepartments, IRange} from '../models/services'
+import { IService, IDepartments, IRange } from '../models/services'
 
-export const mockData : IService[] = [
+export const mockData: IService[] = [
     {
         title: "SFU Beedie Writing Mentors",
         subtitle: "Academic Advising ",
@@ -16,37 +16,51 @@ export const mockData : IService[] = [
         contact: "Register at Beedie Community: https://beediecommunity.sfu.ca/home.html"
     },
     {
-        title: "example 2",
-        subtitle: "subtitle",
-        shortDescription: "lorem ipsum decor ...",
+        title: "Mentors in Business ",
+        subtitle: "Academic Advising ",
+        shortDescription: "Beedie students, both graduates and undergraduates, connect with individuals from the business community in areas of their career interest in order to make better-informed career choices and expand their understanding of a target industry. The program provides a platform for working professionals to share insights, experiences and knowledge that will inspire and motivate students to embark on their career search. ",
         departments: [
-            IDepartments.All,
+            IDepartments.Beedie,
         ],
         yearRange: {
             start: 0,
-            end: 4
+            end: 0
         },
-        source: "www.sfu.ca",
-        contact: "big-petter@sfu.ca"
+        source: "https://beedie.sfu.ca/resources/mentors-in-business",
+        contact: "Login on Beedie Community Account to access registration form"
     },
     {
-        title: "example 3",
-        subtitle: "subtitle",
-        shortDescription: "lorem ipsum decor ...",
+        title: "Connect with an advisor ",
+        subtitle: "Career and Academic Advising ",
+        shortDescription: "Gives students information on who to contact on different advising needs such as Academic Advising, Career Management Centre, Student Engagement Office, Office of International Programs, Co-operative Education ",
         departments: [
-            IDepartments.All,
+            IDepartments.Beedie,
         ],
         yearRange: {
             start: 0,
             end: 4
         },
-        source: "www.sfu.ca",
-        contact: "big-petter@sfu.ca"
+        source: "https://beedie.sfu.ca/resources/undergraduates/connect-with-an-advisor",
+        contact: ""
     },
     {
-        title: "example 4",
-        subtitle: "subtitle",
-        shortDescription: "lorem ipsum decor ...",
+        title: "Develop your Career",
+        subtitle: "Career Management Centre ",
+        shortDescription: "The Career Management Centre will help students strategize and build their career. The programs, resources, and a networking opportunities will set students up for professional success. Types of advising include: Career exploration specific to your concentration, comprehensive resume/cover letter review, job search strategies, managing your online presence, networking tips, mock interviews and interview tips, salary negotiation, familiarization with additional resources, and resources and information on industry/abour market",
+        departments: [
+            IDepartments.Beedie,
+        ],
+        yearRange: {
+            start: 0,
+            end: 4
+        },
+        source: "https://beedie.sfu.ca/resources/undergraduates/develop-your-career",
+        contact: "Book advising appointments through Beedie Community. Drop- in advising is from Monday - Thursday: 1PM to 4PM. Contact bbacareers@sfu.ca if there are any questions."
+    },
+    {
+        title: "Lecture Recordings ",
+        subtitle: "IT services ",
+        shortDescription: "Lectures given in selected theatres and classroom can be recorded digitally, and are available online for students.",
         departments: [
             IDepartments.All,
         ],
@@ -54,8 +68,8 @@ export const mockData : IService[] = [
             start: 0,
             end: 4
         },
-        source: "www.sfu.ca",
-        contact: "big-petter@sfu.ca"
+        source: "https://www.sfu.ca/itservices/elearning.html",
+        contact: ""
     }
 ]
 export default mockData;
