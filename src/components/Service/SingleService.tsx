@@ -4,6 +4,8 @@ import "./SingleService.scss";
 
 interface ISingleServiceProps {
   service: IService;
+  filter?: ((service: IService) => boolean) 
+  // callback is a filter function
 }
 
 interface ISingleServiceState {
