@@ -5,14 +5,14 @@ import "./App.scss";
 import Error404 from "../Error404/Error404";
 import Contact from "../Contact/Contact";
 import SearchList from "../SearchList/SearchList";
-import mockData from "../../data/mockData";
+// import mockData from "../../data/mockData";
 import SuperNavigation from "../../components/Navigation/SuperNavigation";
 
 class App extends React.Component<{}, {}> {
   showServicesList = () => {
     return (
       <div>
-        <SearchList data={mockData} />
+        <SearchList/>
       </div>
     );
   };

@@ -2,8 +2,9 @@ export interface IService {
     title: string,
     subtitle: string,
     shortDescription: string,
-    departments: IDepartments[],
-    yearRange: IRange,
+    departments?: IDepartments[],
+    yearRangeStart?: number,
+    yearRangeEnd?: number,
     source: string,
     contact: string,
 }
@@ -14,11 +15,6 @@ export enum IDepartments {
     Engineering = "Enginering Science",
     HealthSci = "Health Sciences",
     All = "All students"
-}
-
-export interface IRange {
-    start: number,
-    end: number
 }
 
 export default IService;

@@ -1,4 +1,4 @@
-import { IService, IDepartments, IRange } from '../models/services'
+import { IService, IDepartments } from '../models/services'
 
 export const mockData: IService[] = [
     {
@@ -8,10 +8,6 @@ export const mockData: IService[] = [
         departments: [
             IDepartments.Beedie,
         ],
-        yearRange: {
-            start: 0,
-            end: 0
-        },
         source: "https://beedie.sfu.ca/resources/undergraduates/writing-mentors",
         contact: "Register at Beedie Community: https://beediecommunity.sfu.ca/home.html"
     },
@@ -22,10 +18,6 @@ export const mockData: IService[] = [
         departments: [
             IDepartments.Beedie,
         ],
-        yearRange: {
-            start: 0,
-            end: 0
-        },
         source: "https://beedie.sfu.ca/resources/mentors-in-business",
         contact: "Login on Beedie Community Account to access registration form"
     },
@@ -36,10 +28,6 @@ export const mockData: IService[] = [
         departments: [
             IDepartments.Beedie,
         ],
-        yearRange: {
-            start: 0,
-            end: 4
-        },
         source: "https://beedie.sfu.ca/resources/undergraduates/connect-with-an-advisor",
         contact: ""
     },
@@ -50,10 +38,6 @@ export const mockData: IService[] = [
         departments: [
             IDepartments.Beedie,
         ],
-        yearRange: {
-            start: 0,
-            end: 4
-        },
         source: "https://beedie.sfu.ca/resources/undergraduates/develop-your-career",
         contact: "Book advising appointments through Beedie Community. Drop- in advising is from Monday - Thursday: 1PM to 4PM. Contact bbacareers@sfu.ca if there are any questions."
     },
@@ -64,10 +48,6 @@ export const mockData: IService[] = [
         departments: [
             IDepartments.All,
         ],
-        yearRange: {
-            start: 0,
-            end: 4
-        },
         source: "https://www.sfu.ca/itservices/elearning.html",
         contact: ""
     }
