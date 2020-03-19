@@ -25,11 +25,12 @@ class SearchList extends React.Component<{}, ISearchListState> {
     this.filter();
   };
 
-  componentDidUpdate(prevProps: any, prevState: ISearchListState) {
-    if (this.state.filter !== prevState.filter) {
-      this.filter()
-    }
-  }
+  // componentDidUpdate(prevProps: any, prevState: ISearchListState) {
+  //   if (this.state.filter !== prevState.filter) {
+  //     this.filter();
+  //     console.log("new filters:: ", this.state.filter.toString());
+  //   }
+  // }
 
   showServices = () => {
     return this.state.data.map(this.showSingleService);
@@ -53,7 +54,7 @@ class SearchList extends React.Component<{}, ISearchListState> {
         this.state.filter.forEach(category => {
           if (!service[category]) {
             include = false;
-            console.log("this service isn't a part of category ", category);
+            // console.log("this service isn't a part of category ", category);
           }
         });
         return include;
@@ -62,18 +63,22 @@ class SearchList extends React.Component<{}, ISearchListState> {
   };
 
   updateFilters = (categories: ICategories[]) => {
-    console.log("updating filter list with ", categories.toString());
+    console.log(
+      "-> new filter state:: ",
+      categories.toString()
+    );
     this.setState({
       filter: categories
-    })
-  }
+    });
+    this.filter()
+  };
 
   render() {
     return (
       <div>
         <div className="SearchList">
           <div className="container">
-            <SearchFilters update={this.updateFilters}/>
+            <SearchFilters update={this.updateFilters} />
             <h1 className="title">List here</h1>
             <div className="row">{this.showServices()}</div>
           </div>

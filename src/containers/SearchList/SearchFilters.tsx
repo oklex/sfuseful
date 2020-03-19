@@ -24,7 +24,8 @@ class SearchFilters extends React.Component<
           <input
             type="radio"
             value={category}
-            onChange={() => {
+            checked={this.contains(category)}
+            onClick={() => {
               this.handleChange(category);
             }}
           />
@@ -34,7 +35,17 @@ class SearchFilters extends React.Component<
     });
   };
 
-  handleChange = (category: ICategories) => {
+  contains = (category: ICategories) => {
+    var contains: boolean = false;
+    this.state.filterList.forEach(c => {
+      if (c === category) {
+        contains = true;
+      }
+    });
+    return contains;
+  };
+
+  handleChange = async (category: ICategories) => {
     console.log("updating filter list with ", category);
     var contains: boolean = false;
     var index: number = -1;
@@ -46,22 +57,24 @@ class SearchFilters extends React.Component<
     });
     if (contains) {
       // if in array, remove it= true
-      console.log("contains - removing")
-      this.setState({
-        filterList: this.state.filterList.splice(index, 1)
+      var tempList: ICategories[] = this.state.filterList;
+      tempList.splice(index, 1);
+      console.log('what is the array after one is removed? ', index, tempList.toString())
+      await this.setState({
+        filterList: tempList
       });
     } else if (this.state.filterList.length === 0) {
-        console.log("empty list - added")
-      this.setState({
+      await this.setState({
         filterList: [category]
       });
-    }else {
-        console.log("replacing filter")
-      this.setState({
-        filterList: [category]
+    } else {
+      var tempList: ICategories[] = this.state.filterList;
+      tempList.push(category);
+      console.log('what is the array after one is added? ', tempList.toString())
+      await this.setState({
+        filterList: tempList
       });
     }
-    // if not in array, add it
     this.props.update(this.state.filterList);
   };
 

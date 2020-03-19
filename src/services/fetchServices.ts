@@ -5,7 +5,7 @@ export const Services = {
     async fetchServices(): Promise<IService[]> {
         try {
             var returnVal: IService[] = data
-            console.log("fetched: ", returnVal)
+            // console.log("fetched: ", returnVal)
             return returnVal
         } catch (e) {
             console.log('request failed')
