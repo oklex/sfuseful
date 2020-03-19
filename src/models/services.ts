@@ -52,7 +52,22 @@ export enum ICategories {
     ITServices = "ITServices",
     applications = "applications",
     studentNetworks = "studentNetworks"
-
 }
+
+export const allCategories: ICategories[] =  [
+    ICategories.degreePlanning,
+    ICategories.academicAdvising,
+    ICategories.careerServices,
+    ICategories.workAndVolunteering,
+    ICategories.healthAndCounselling,
+    ICategories.academicToolsAndHelp,
+    ICategories.library,
+    ICategories.research,
+    ICategories.peerToPeer,
+    ICategories.financialAid,
+    ICategories.ITServices,
+    ICategories.applications,
+    ICategories.studentNetworks
+]
 
 export default IService;
