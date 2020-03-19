@@ -1,11 +1,9 @@
 import React from "react";
-import IService from "../../models/services";
+import IService, { ICategories } from "../../models/services";
 import "./SingleService.scss";
 
 interface ISingleServiceProps {
   service: IService;
-  filter?: ((service: IService) => boolean) 
-  // callback is a filter function
 }
 
 interface ISingleServiceState {
@@ -18,10 +16,13 @@ class SingleService extends React.Component<
   ISingleServiceState
 > {
   state = {
+    hide: false,
     readMore: false,
-    shortDescription: this.props.service.shortDescription.slice(0, 200)
+    shortDescription: this.props.service.description
+      ? this.props.service.description.slice(0, 200)
+      : ""
   };
-
+  
   showDescription = () => {
     if (this.state.readMore) {
       return (
@@ -36,7 +37,7 @@ class SingleService extends React.Component<
           </button>
         </span>
       );
-    } else if (this.props.service.shortDescription.length > 200) {
+    } else if (this.state.shortDescription.length > 200) {
       return (
         <span>
           <p>{this.state.shortDescription}...</p>
@@ -52,7 +53,7 @@ class SingleService extends React.Component<
     } else {
       return (
         <span>
-          <p>{this.state.shortDescription}...</p>
+          <p>{this.state.shortDescription}</p>
         </span>
       );
     }
@@ -65,14 +66,18 @@ class SingleService extends React.Component<
   };
 
   render() {
-    const service = this.props.service;
-    return (
-      <div className="service">
-        <h3>{service.title}</h3>
-        {this.showDescription()}
-        <p className="smallText">contact: {service.contact}</p>
-      </div>
-    );
+    if (this.state.hide) {
+      return <div></div>;
+    } else {
+      const service = this.props.service;
+      return (
+        <div className="service">
+          <h3>{service.title}</h3>
+          {this.showDescription()}
+          <p className="smallText">contact: {service.contact}</p>
+        </div>
+      );
+    }
   }
 }
 

@@ -1,5 +1,5 @@
 import IService from "../models/services"
-import data from '../data/data.json'
+import data from '../data/data-march-18.json'
 
 export const Services = {
     async fetchServices(): Promise<IService[]> {

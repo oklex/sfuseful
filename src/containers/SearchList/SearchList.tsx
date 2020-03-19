@@ -1,23 +1,27 @@
 import React from "react";
-import IService from "../../models/services";
+import IService, { ICategories } from "../../models/services";
 import "./SearchList.scss";
 import SingleService from "../../components/Service/SingleService";
 import { Services } from "../../services/fetchServices";
 
 interface ISearchListState {
   data: IService[];
+  filter: ICategories[];
 }
 
 class SearchList extends React.Component<{}, {}> {
   state = {
-    data: []
+    data: [],
+    filter: []
   };
 
   componentDidMount = async () => {
     // await Services.fetchServices()
     this.setState({
-      data: await Services.fetchServices()
+      data: await Services.fetchServices(),
+      filter: [ICategories.careerServices]
     });
+    this.filter()
   };
 
   showServices = () => {
@@ -30,6 +34,28 @@ class SearchList extends React.Component<{}, {}> {
         <SingleService service={service} />
       </div>
     );
+  };
+
+  filter = async () => {
+    this.setState({
+      data: await Services.fetchServices()
+    });
+    var filteredData: IService[] = [];
+    this.state.data.forEach(service => {
+      // if it has all categories, then add to new list
+      var include: boolean = true;
+      this.state.filter.forEach(category => {
+        if (!service[category]) {
+          include = false;
+          console.log("this service isn't a part of category ", category);
+        }
+      });
+      if (include === true) filteredData.push(service);
+    });
+
+    this.setState({
+      data: filteredData
+    })
   };
 
   render() {
