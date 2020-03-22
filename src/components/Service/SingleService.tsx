@@ -74,7 +74,7 @@ class SingleService extends React.Component<
         <div className="service">
           <h3>{service.title}</h3>
           {this.showDescription()}
-          <p className="smallText">contact: {service.contact}</p>
+          <p className="smallText">departments: {service.departments}</p>
         </div>
       );
     }

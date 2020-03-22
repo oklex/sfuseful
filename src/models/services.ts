@@ -17,7 +17,7 @@ export interface IService {
     studentNetworks?: boolean,
     // categories end
     
-    departments?: string,
+    departments: string,
     accessMethod?: string,
     availability?: string,
     recommended?: boolean,
