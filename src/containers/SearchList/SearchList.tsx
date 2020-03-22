@@ -7,20 +7,23 @@ import SearchFilters from "./SearchFilters";
 
 interface ISearchListState {
   data: IService[];
-  filter: ICategories[];
+  categoryFilters: ICategories[];
+  departmentFilters: string[];
 }
 
 class SearchList extends React.Component<{}, ISearchListState> {
   state = {
     data: [],
-    filter: []
+    categoryFilters: [],
+    departmentFilters: []
   };
 
   componentDidMount = async () => {
     // await Services.fetchServices()
     this.setState({
       data: await Services.fetchServices(),
-      filter: []
+      categoryFilters: [],
+      departmentFilters: []
     });
     this.filter();
   };
@@ -45,32 +48,57 @@ class SearchList extends React.Component<{}, ISearchListState> {
   };
 
   filter = async () => {
-    var data: IService[] = await Services.fetchServices();
+    var allData: IService[] = await Services.fetchServices();
 
+    // by categories
     this.setState({
-      data: data.filter(service => {
+      data: allData.filter(service => {
         // if it has all categories, then add to new list
-        var include: boolean = true;
-        this.state.filter.forEach(category => {
+        var includesCategory: boolean = true;
+        this.state.categoryFilters.forEach(category => {
           if (!service[category]) {
-            include = false;
+            includesCategory = false;
             // console.log("this service isn't a part of category ", category);
           }
         });
-        return include;
+        return includesCategory;
+      })
+    });
+    this.filterDepartments();
+  };
+
+  filterDepartments = async () => {
+    var filterByDepartments: IService[] = this.state.data;
+    this.setState({
+      data: filterByDepartments.filter(service => {
+        var includesDepartment: boolean = true;
+        this.state.departmentFilters.forEach(department => {
+          if (
+            !service.departments.includes(department) &&
+            !service.departments.includes("ALL")
+          ) {
+            includesDepartment = false;
+          }
+        });
+        return includesDepartment;
       })
     });
   };
 
-  updateFilters = (categories: ICategories[]) => {
-    console.log(
-      "-> new filter state:: ",
-      categories.toString()
-    );
+  updateCategoryFilters = (categories: ICategories[]) => {
+    console.log("-> new filter state:: ", categories.toString());
     this.setState({
-      filter: categories
+      categoryFilters: categories
     });
-    this.filter()
+    this.filter();
+  };
+
+  updateDepartmentFilters = (departments: string[]) => {
+    console.log("-> new filter state:: ", departments);
+    this.setState({
+      departmentFilters: departments
+    });
+    this.filter();
   };
 
   render() {
@@ -78,7 +106,7 @@ class SearchList extends React.Component<{}, ISearchListState> {
       <div>
         <div className="SearchList">
           <div className="container">
-            <SearchFilters update={this.updateFilters} />
+            <SearchFilters updateCategories={this.updateCategoryFilters} updateDepartments={this.updateDepartmentFilters}/>
             <h1 className="title">List here</h1>
             <div className="row">{this.showServices()}</div>
           </div>

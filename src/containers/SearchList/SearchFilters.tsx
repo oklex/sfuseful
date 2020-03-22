@@ -1,12 +1,18 @@
 import React from "react";
-import { allCategories, ICategories } from "../../models/services";
+import {
+  allCategories,
+  ICategories,
+  allDepartments
+} from "../../models/services";
 
 interface ISearchFiltersProps {
-  update: (list: ICategories[]) => void;
+  updateCategories: (list: ICategories[]) => void;
+  updateDepartments: (list: string[]) => void;
 }
 
 interface ISearchFiltersState {
-  filterList: ICategories[];
+  categoriesFilterList: ICategories[];
+  departmentsFilterList: string[];
 }
 
 class SearchFilters extends React.Component<
@@ -14,19 +20,20 @@ class SearchFilters extends React.Component<
   ISearchFiltersState
 > {
   state = {
-    filterList: []
+    categoriesFilterList: [],
+    departmentsFilterList: []
   };
 
-  showInput = () => {
+  showCategoryInput = () => {
     return allCategories.map(category => {
       return (
-        <div>
+        <div key={category.toString()}>
           <input
             type="radio"
             value={category}
-            checked={this.contains(category)}
+            checked={this.categoryIsChecked(category)}
             onClick={() => {
-              this.handleChange(category);
+              this.handleCategoryChange(category);
             }}
           />
           {category}
@@ -35,9 +42,37 @@ class SearchFilters extends React.Component<
     });
   };
 
-  contains = (category: ICategories) => {
+  showDepartmentInput = () => {
+    return allDepartments.map(department => {
+      return (
+        <div key={department}>
+          <input
+            type="radio"
+            value={department}
+            checked={this.departmentIsChecked(department)}
+            onClick={() => {
+              this.handleDepartmentChange(department);
+            }}
+          />
+          {department}
+        </div>
+      );
+    });
+  };
+
+  departmentIsChecked = (department: string) => {
     var contains: boolean = false;
-    this.state.filterList.forEach(c => {
+    this.state.departmentsFilterList.forEach(d => {
+      if (d === department) {
+        contains = true;
+      }
+    });
+    return contains;
+  };
+
+  categoryIsChecked = (category: ICategories) => {
+    var contains: boolean = false;
+    this.state.categoriesFilterList.forEach(c => {
       if (c === category) {
         contains = true;
       }
@@ -45,41 +80,87 @@ class SearchFilters extends React.Component<
     return contains;
   };
 
-  handleChange = async (category: ICategories) => {
-    console.log("updating filter list with ", category);
-    var contains: boolean = false;
-    var index: number = -1;
-    this.state.filterList.forEach((c, key) => {
-      if (c === category) {
-        contains = true;
-        index = key;
+  handleDepartmentChange = async (department: string) => {
+    console.log("updating filter list with ", department);
+    var removeDepartment: boolean = false;
+    var removeAtIndex: number = -1;
+    this.state.departmentsFilterList.forEach((d, key) => {
+      if (d === department) {
+        removeDepartment = true;
+        removeAtIndex = key;
       }
     });
-    if (contains) {
-      // if in array, remove it= true
-      var tempList: ICategories[] = this.state.filterList;
-      tempList.splice(index, 1);
-      console.log('what is the array after one is removed? ', index, tempList.toString())
+
+    if (removeDepartment) {
+      var tempDepartments: string[] = this.state.departmentsFilterList;
+      tempDepartments.splice(
+          removeAtIndex,
+          1
+        )
       await this.setState({
-        filterList: tempList
+        departmentsFilterList: tempDepartments
       });
-    } else if (this.state.filterList.length === 0) {
+      console.log('removed ' + department)
+    } else if (this.state.departmentsFilterList.length === 0) {
       await this.setState({
-        filterList: [category]
+        departmentsFilterList: [department]
+      });
+      console.log('was empty; added ' + department)
+    } else {
+      var tempDepartments: string[] = this.state.departmentsFilterList;
+      tempDepartments.push(department);
+      await this.setState({
+        departmentsFilterList: tempDepartments
+      });
+      console.log('added ' + department)
+    }
+
+    this.props.updateDepartments(this.state.departmentsFilterList)
+  };
+
+  handleCategoryChange = async (category: ICategories) => {
+    console.log("updating filter list with ", category);
+    var removeCategory: boolean = false;
+    var removeAtIndex: number = -1;
+    this.state.categoriesFilterList.forEach((c, key) => {
+      if (c === category) {
+        removeCategory = true;
+        removeAtIndex = key;
+      }
+    });
+
+    if (removeCategory) {
+      var tempCategoriesList: ICategories[] = this.state.categoriesFilterList;
+      tempCategoriesList.splice(removeAtIndex, 1);
+      console.log(
+        "what is the array after one is removed? ",
+        removeAtIndex,
+        tempCategoriesList.toString()
+      );
+      await this.setState({
+        categoriesFilterList: tempCategoriesList
+      });
+    } else if (this.state.categoriesFilterList.length === 0) {
+      await this.setState({
+        categoriesFilterList: [category]
       });
     } else {
-      var tempList: ICategories[] = this.state.filterList;
-      tempList.push(category);
-      console.log('what is the array after one is added? ', tempList.toString())
+      // normal addition
+      var tempCategoriesList: ICategories[] = this.state.categoriesFilterList;
+      tempCategoriesList.push(category);
+      console.log(
+        "what is the array after one is added? ",
+        tempCategoriesList.toString()
+      );
       await this.setState({
-        filterList: tempList
+        categoriesFilterList: tempCategoriesList
       });
     }
-    this.props.update(this.state.filterList);
+    this.props.updateCategories(this.state.categoriesFilterList);
   };
 
   render() {
-    return <div>{this.showInput()}</div>;
+  return <div className='row'><div className="col-md-6">{this.showCategoryInput()}</div><div className="col-md-6">{this.showDepartmentInput()}</div></div>;
   }
 }
 
