@@ -32,21 +32,39 @@ class FiltersWrapper extends React.Component<
     if (this.state.isMobile) {
       return (
         <div className="collapseOnMobile">
-          <div className="sticky">
+          <div>
             <button
-            className="darkBar"
+              className="darkBar"
               onClick={() => {
                 this.setState({
                   hide: !this.state.hide
                 });
               }}
             >
-                {this.state.hide ? "show " : "hide "}
+              {this.state.hide ? "show " : "hide "}
               filters
             </button>
           </div>
           <div className={this.state.hide ? "hide" : "show"}>
+            <div className='scrollable'>
             {this.props.children}
+
+            </div>
+            {this.state.hide ? (
+              <div />
+            ) : (
+              <button
+                className="bottomBar"
+                onClick={() => {
+                  this.setState({
+                    hide: !this.state.hide
+                  });
+                }}
+              >
+                {this.state.hide ? "show " : "hide "}
+                filters
+              </button>
+            )}
           </div>
         </div>
       );

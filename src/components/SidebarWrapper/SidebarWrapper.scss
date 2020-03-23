@@ -9,17 +9,7 @@
   animation-fill-mode: forwards;
   height: 0px;
   //   height: 100vh;
-  .sticky {
-    .darkBar {
-      z-index: 10000;
-      background-color: $dark-grey;
-      color: white;
-      width: 100vw;
-      height: 2em;
-    }
-  }
   .hide {
-    // visibility: hidden;
     -webkit-animation-name: slideOutUp;
     -webkit-animation-duration: 0.1s;
     animation-name: slideOutUp;
@@ -27,16 +17,38 @@
     animation-fill-mode: forwards;
   }
   .show {
-    // visibility: visible;
-    max-height: 80vh;
-    overflow-y: scroll;
     background-color: white;
     -webkit-animation-name: slideInDown;
     -webkit-animation-duration: 0.1s;
     animation-name: slideInDown;
     animation-duration: 0.1s;
     animation-fill-mode: forwards;
+    .scrollable {
+      max-height: 80vh;
+      overflow-y: scroll;
+      background-color: white;
+
+    }
   }
+}
+
+.darkBar {
+  z-index: 10000;
+  background-color: $dark-grey;
+  color: white;
+  width: 100vw;
+  height: 2em;
+}
+
+
+.bottomBar {
+  z-index: 10000;
+  background-color: $dark-grey;
+  color: white;
+  width: 100vw;
+  height: 2em;
+  position: fixed;
+  bottom: 0;
 }
 
 @keyframes slideInDown {
