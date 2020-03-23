@@ -40,7 +40,11 @@ class SearchList extends React.Component<{}, ISearchListState> {
     if (this.state.data.length > 0) {
       return this.state.data.map(this.showSingleService);
     } else {
-      return (<div className='centered errorMessage'><h2>There are no resources that match your criteria!</h2></div>)
+      return (
+        <div className="centered errorMessage">
+          <h2>There are no resources that match your criteria!</h2>
+        </div>
+      );
     }
   };
 
@@ -108,8 +112,8 @@ class SearchList extends React.Component<{}, ISearchListState> {
 
   render() {
     return (
-      <div>
-        <div className="SearchList row">
+      <div className="SearchList">
+        <div className=" row">
           <div className="filterBar col-sm-3">
             <FiltersWrapper>
               <SearchFilters
