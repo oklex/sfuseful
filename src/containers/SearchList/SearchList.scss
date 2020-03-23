@@ -20,9 +20,10 @@
   .filterBar {
     padding-top: 15px;
     .filterConents {
-      overflow-y: auto;
+      overflow-y: scroll;
+      overflow-x: hidden;
       padding-left: 30px;
-      padding-bottom: 3em;
+      margin-bottom: 3em;
       // border-bottom: solid 15px $dark-grey;
       .resetButton {
         border-radius: 15px;

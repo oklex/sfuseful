@@ -24,10 +24,27 @@
     animation-duration: 0.1s;
     animation-fill-mode: forwards;
     .scrollable {
-      max-height: 80vh;
+      max-height: calc(100vh);
       overflow-y: scroll;
+      overflow-x: hidden;
       background-color: white;
-
+    }
+    .scrollableEnd {
+      .bottomBar {
+        z-index: 10000;
+        background-color: $dark-grey;
+        color: white;
+        font-size: 25px;
+        width: 100vw;
+        position: fixed;
+        width: 2em;
+        height: 2em;
+        margin-left: calc(100vw - 3em);
+        // margin-right: calc(50vw - 1em);
+        margin-bottom: 2em;
+        border-radius: 100%;
+        bottom: 0.5em;
+      }
     }
   }
 }
@@ -36,19 +53,21 @@
   z-index: 10000;
   background-color: $dark-grey;
   color: white;
-  width: 100vw;
-  height: 2em;
-}
-
-
-.bottomBar {
-  z-index: 10000;
-  background-color: $dark-grey;
-  color: white;
-  width: 100vw;
-  height: 2em;
+  width: 20em;
+  height: 20em;
   position: fixed;
-  bottom: 0;
+  padding-top: calc(20em - 3em);
+  top: calc(-17.5em);
+  font-size: 14px;
+  margin-left: calc(50vw - 10em);
+  margin-right: calc(50vw - 10em);
+
+  border-bottom-left-radius: calc(
+    10em * 3
+  ); /* 100px of height + 10px of border */
+  border-bottom-right-radius: calc(
+    10em * 3
+  ); /* 100px of height + 10px of border */
 }
 
 @keyframes slideInDown {

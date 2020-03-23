@@ -46,25 +46,24 @@ class FiltersWrapper extends React.Component<
             </button>
           </div>
           <div className={this.state.hide ? "hide" : "show"}>
-            <div className='scrollable'>
-            {this.props.children}
+            <div className="scrollable">{this.props.children}</div>
 
+            <div className="scrollableEnd">
+              {this.state.hide ? (
+                <div />
+              ) : (
+                <button
+                  className="bottomBar"
+                  onClick={() => {
+                    this.setState({
+                      hide: !this.state.hide
+                    });
+                  }}
+                >
+                  ^
+                </button>
+              )}
             </div>
-            {this.state.hide ? (
-              <div />
-            ) : (
-              <button
-                className="bottomBar"
-                onClick={() => {
-                  this.setState({
-                    hide: !this.state.hide
-                  });
-                }}
-              >
-                {this.state.hide ? "show " : "hide "}
-                filters
-              </button>
-            )}
           </div>
         </div>
       );

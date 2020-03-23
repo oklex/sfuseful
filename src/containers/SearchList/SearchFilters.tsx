@@ -184,7 +184,7 @@ class SearchFilters extends React.Component<
   render() {
     return (
       <div className="row filterConents">
-        <div className="col-lg-12">
+        <div className="col-lg-10">
           <div className='d-flex justify-content-between'>
             <h2 className="selectionTitle redText">Filters</h2>
             <button className="resetButton" onClick={() => this.resetFilters()}>
@@ -194,7 +194,7 @@ class SearchFilters extends React.Component<
           <h3 className="selectionTitle">Categories</h3>
           {this.showCategoryInput()}
         </div>
-        <div className="col-lg-12">
+        <div className="col-lg-10">
           <h3 className="selectionTitle">Departments</h3>
           {this.showDepartmentInput()}
         </div>
