@@ -37,7 +37,11 @@ class SearchList extends React.Component<{}, ISearchListState> {
   // }
 
   showServices = () => {
-    return this.state.data.map(this.showSingleService);
+    if (this.state.data.length > 0) {
+      return this.state.data.map(this.showSingleService);
+    } else {
+      return (<div className='centered errorMessage'><h2>There are no resources that match your criteria!</h2></div>)
+    }
   };
 
   showSingleService = (service: IService, index: number) => {

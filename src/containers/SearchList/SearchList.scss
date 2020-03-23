@@ -7,22 +7,30 @@
 .SearchList {
   padding-top: 30px;
   .contentList {
+    padding-left: 30px;
     .searchItem {
       padding: 0px;
-      // padding-top: 10px;
       margin: 0px;
+    }
+    .errorMessage {
+      margin-top: calc(45vh - 100px);
     }
   }
   .filterBar {
-    overflow-y: scroll;
     padding-top: 15px;
-    .selectionTitle {
-      padding-top: 15px;
-      padding-bottom: 5px;
-    }
-    .selectionLabel {
-      font-size: 14px;
-      padding-left: 3px;
+
+    .filterConents {
+      padding-left: 30px;
+      padding-bottom: 20px;
+      // border-bottom: solid 15px $dark-grey;
+      .selectionTitle {
+        padding-top: 15px;
+        padding-bottom: 5px;
+      }
+      .selectionLabel {
+        font-size: 14px;
+        padding-left: 3px;
+      }
     }
   }
 }

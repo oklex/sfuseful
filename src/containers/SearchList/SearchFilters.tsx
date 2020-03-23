@@ -174,7 +174,7 @@ class SearchFilters extends React.Component<
 
   render() {
     return (
-      <div className="row">
+      <div className="row filterConents">
         <div className="col-lg-12">
         <h2 className='selectionTitle redText'>Filters</h2>
           <h3 className="selectionTitle">Categories</h3>
