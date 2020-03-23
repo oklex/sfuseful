@@ -28,6 +28,8 @@
   }
   .show {
     // visibility: visible;
+    max-height: 100vh;
+    overflow-y: scroll;
     background-color: white;
     -webkit-animation-name: slideInDown;
     -webkit-animation-duration: 0.1s;

@@ -19,10 +19,10 @@
   }
   .filterBar {
     padding-top: 15px;
-
     .filterConents {
+      overflow-y: auto;
       padding-left: 30px;
-      padding-bottom: 20px;
+      padding-bottom: 30px;
       // border-bottom: solid 15px $dark-grey;
       .resetButton {
         border-radius: 15px;
