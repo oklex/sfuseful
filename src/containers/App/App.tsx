@@ -13,7 +13,7 @@ class App extends React.Component<{}, {}> {
   showServicesList = () => {
     return (
       <div>
-        <SearchList/>
+        <SearchList />
       </div>
     );
   };
@@ -46,7 +46,7 @@ class App extends React.Component<{}, {}> {
             />
           </Helmet>
           {/* <SuperNavigation /> */}
-      <SplashPageWrapper/>
+          <SplashPageWrapper />
           <Switch>
             <Route exact path="/" component={this.showServicesList} />
             <Route exact path="/contact" component={this.showContact} />

@@ -45,7 +45,14 @@ class SplashPageWrapper extends React.Component<
               x
             </button>
           </div>
-<p>about our project</p>
+          <div className='content'>
+            <h1>Learn what resources you have access to</h1>
+            <p>You're paying tuition after all!</p>
+          <br/>
+          <button className='actionBtn' onClick={() => this.turnOff()}>
+              Get started
+            </button>
+          </div>
         </div>
       );
     }

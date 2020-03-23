@@ -8,14 +8,23 @@
   height: 100vh;
   background-color: white;
   .heading {
-      padding: 10px;
-  .closeSplashBtn {
-    padding: 5px;
-    width: 40px;
-    height: 40px;
+    padding: 10px;
+    .closeSplashBtn {
+      padding: 5px;
+      width: 40px;
+      height: 40px;
 
-    border-radius: 100%;
-    border: solid 1px $neutral-grey;
+      border-radius: 100%;
+      border: solid 1px $neutral-grey;
+    }
   }
-}
+  .content{
+    padding-top: 40vh;
+    text-align: center;
+    .actionBtn {
+      padding: 10px;
+      border-radius: 15px;
+      border: solid 1px $brand-red;
+    }
+  }
 }
