@@ -97,10 +97,12 @@ class SingleService extends React.Component<
       const service = this.props.service;
       return (
         <div className="service">
-          <h3>{service.title}</h3>
-          {this.showDescription()}
-          <p className="smallText">Departments: {service.departments}</p>
-          <p className="smallText">Categories: {this.getCategories()}</p>
+          <a href={this.props.service.source} target="_blank">
+            <h3>{service.title}</h3>
+            {this.showDescription()}
+            <p className="smallText">Departments: {service.departments}</p>
+            <p className="smallText">Categories: {this.getCategories()}</p>
+          </a>
         </div>
       );
     }
