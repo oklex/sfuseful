@@ -185,7 +185,7 @@ class SearchFilters extends React.Component<
     return (
       <div className="row filterConents">
         <div className="col-lg-10">
-          <div className='d-flex justify-content-between'>
+          <div className='d-flex'>
             <h2 className="selectionTitle redText">Filters</h2>
             <button className="resetButton" onClick={() => this.resetFilters()}>
               Clear filters

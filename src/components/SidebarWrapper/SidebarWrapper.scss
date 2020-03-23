@@ -25,7 +25,7 @@
     animation-fill-mode: forwards;
     .scrollable {
       max-height: calc(100vh);
-      overflow-y: scroll;
+      overflow-y: auto;
       overflow-x: hidden;
       background-color: white;
     }
@@ -53,21 +53,16 @@
   z-index: 10000;
   background-color: $dark-grey;
   color: white;
-  width: 20em;
-  height: 20em;
+  width: auto;
+  height: 3em;
+  padding-left: 20px;
+  padding-right: 20px;
   position: fixed;
-  padding-top: calc(20em - 3em);
-  top: calc(-17.5em);
+  // padding-top: calc(20em - 3em);
+  top: 1em;
+  right: 1em;
+  border-radius: 50px;
   font-size: 14px;
-  margin-left: calc(50vw - 10em);
-  margin-right: calc(50vw - 10em);
-
-  border-bottom-left-radius: calc(
-    10em * 3
-  ); /* 100px of height + 10px of border */
-  border-bottom-right-radius: calc(
-    10em * 3
-  ); /* 100px of height + 10px of border */
 }
 
 @keyframes slideInDown {
