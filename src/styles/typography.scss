@@ -57,7 +57,9 @@ body {
     text-decoration: none;
   }
   p {
+    padding-top: 5px;
     font-size: 14px;
+    font-family: "Source Serif Pro",sans-serif;
   }
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -83,5 +85,9 @@ body {
     padding: 0px;
     font-size: 12px;
     color: $neutral-grey;
+  }
+
+  .redText {
+    color: $brand-red;
   }
 }

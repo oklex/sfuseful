@@ -1,14 +1,27 @@
-@import '../../styles/colours.scss';
+@import "../../styles/colours.scss";
 
 .filter {
-    padding-top: 40vh;
+  padding-top: 40vh;
 }
 
 .SearchList {
-    padding-top: 30px;
+  padding-top: 30px;
+  .contentList {
     .searchItem {
-        padding: 0px;
-        // padding-top: 10px;
-        margin: 0px;
+      padding: 0px;
+      // padding-top: 10px;
+      margin: 0px;
     }
+  }
+  .filterBar {
+    padding-top: 15px;
+    .selectionTitle {
+      padding-top: 15px;
+      padding-bottom: 5px;
+    }
+    .selectionLabel {
+      font-size: 14px;
+      padding-left: 3px;
+    }
+  }
 }

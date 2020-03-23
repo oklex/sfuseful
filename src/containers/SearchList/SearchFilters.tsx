@@ -36,10 +36,26 @@ class SearchFilters extends React.Component<
               this.handleCategoryChange(category);
             }}
           />
-          {category}
+          <span className="selectionLabel">
+            {this.formatCategoryDisplay(category)}
+          </span>
         </div>
       );
     });
+  };
+
+  formatCategoryDisplay = (category: string) => {
+    var newString = "";
+    for (var i: number = 0; i < category.length; i++) {
+      if (category[i] === category[i].toUpperCase())
+        newString = newString + " ";
+      if (i === 0) {
+        newString = category[i].toUpperCase();
+      } else {
+        newString = newString + category[i];
+      }
+    }
+    return newString;
   };
 
   showDepartmentInput = () => {
@@ -54,7 +70,7 @@ class SearchFilters extends React.Component<
               this.handleDepartmentChange(department);
             }}
           />
-          {department}
+          <span className="selectionLabel">{department}</span>
         </div>
       );
     });
@@ -159,8 +175,15 @@ class SearchFilters extends React.Component<
   render() {
     return (
       <div className="row">
-        <div className="col-md-6">{this.showCategoryInput()}</div>
-        <div className="col-md-6">{this.showDepartmentInput()}</div>
+        <div className="col-lg-12">
+        <h2 className='selectionTitle redText'>Filters</h2>
+          <h3 className="selectionTitle">Categories</h3>
+          {this.showCategoryInput()}
+        </div>
+        <div className="col-lg-12">
+          <h3 className="selectionTitle">Departments</h3>
+          {this.showDepartmentInput()}
+        </div>
       </div>
     );
   }

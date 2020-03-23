@@ -35,7 +35,7 @@ class App extends React.Component<{}, {}> {
 
   render() {
     return (
-      <div className="App">
+      <div className="App container">
         <Router>
           <Helmet>
             <meta charSet="utf-8" />
@@ -44,7 +44,7 @@ class App extends React.Component<{}, {}> {
               content="width=device-width, initial-scale=1.0"
             />
           </Helmet>
-          <SuperNavigation />
+          {/* <SuperNavigation /> */}
 
           <Switch>
             <Route exact path="/" component={this.showServicesList} />

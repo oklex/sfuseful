@@ -75,7 +75,7 @@ class SearchList extends React.Component<{}, ISearchListState> {
         this.state.departmentFilters.forEach(department => {
           if (
             !service.departments.includes(department)
-            // && !service.departments.includes("ALL")
+            && !service.departments.includes("ALL")
           ) {
             includesDepartment = false;
           }
@@ -104,9 +104,11 @@ class SearchList extends React.Component<{}, ISearchListState> {
   render() {
     return (
       <div>
-        <div className="SearchList">
-          <div className="container">
+        <div className="SearchList row">
+          <div className='filterBar col-sm-3'>
             <SearchFilters updateCategories={this.updateCategoryFilters} updateDepartments={this.updateDepartmentFilters}/>
+          </div>
+          <div className="contentList col-sm-9">
             <h1 className="title">List here</h1>
             <div className="row">{this.showServices()}</div>
           </div>

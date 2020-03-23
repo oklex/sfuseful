@@ -1,5 +1,5 @@
 import React from "react";
-import IService, { ICategories } from "../../models/services";
+import IService, { ICategories, allCategories } from "../../models/services";
 import "./SingleService.scss";
 
 interface ISingleServiceProps {
@@ -22,7 +22,7 @@ class SingleService extends React.Component<
       ? this.props.service.description.slice(0, 200)
       : ""
   };
-  
+
   showDescription = () => {
     if (this.state.readMore) {
       return (
@@ -65,6 +65,31 @@ class SingleService extends React.Component<
     });
   };
 
+  getCategories = () => {
+    var categories: string = "";
+    allCategories.forEach(category => {
+      if (this.props.service[category]) {
+        var formatted: string = this.formatCategoryDisplay(category);
+        categories = categories + " (" + formatted + ") ";
+      }
+    });
+    return categories;
+  };
+
+  formatCategoryDisplay = (category: string) => {
+    var newString = "";
+    for (var i: number = 0; i < category.length; i++) {
+      if (category[i] === category[i].toUpperCase())
+        newString = newString + " ";
+      if (i === 0) {
+        newString = category[i].toUpperCase();
+      } else {
+        newString = newString + category[i];
+      }
+    }
+    return newString;
+  };
+
   render() {
     if (this.state.hide) {
       return <div></div>;
@@ -74,7 +99,8 @@ class SingleService extends React.Component<
         <div className="service">
           <h3>{service.title}</h3>
           {this.showDescription()}
-          <p className="smallText">departments: {service.departments}</p>
+          <p className="smallText">Departments: {service.departments}</p>
+          <p className="smallText">Categories: {this.getCategories()}</p>
         </div>
       );
     }
