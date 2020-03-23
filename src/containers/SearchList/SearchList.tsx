@@ -74,8 +74,8 @@ class SearchList extends React.Component<{}, ISearchListState> {
         var includesDepartment: boolean = true;
         this.state.departmentFilters.forEach(department => {
           if (
-            !service.departments.includes(department) &&
-            !service.departments.includes("ALL")
+            !service.departments.includes(department)
+            // && !service.departments.includes("ALL")
           ) {
             includesDepartment = false;
           }

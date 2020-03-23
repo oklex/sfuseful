@@ -21,7 +21,7 @@ class SearchFilters extends React.Component<
 > {
   state = {
     categoriesFilterList: [],
-    departmentsFilterList: []
+    departmentsFilterList: ["ALL"]
   };
 
   showCategoryInput = () => {
@@ -93,29 +93,26 @@ class SearchFilters extends React.Component<
 
     if (removeDepartment) {
       var tempDepartments: string[] = this.state.departmentsFilterList;
-      tempDepartments.splice(
-          removeAtIndex,
-          1
-        )
+      tempDepartments.splice(removeAtIndex, 1);
+      if (tempDepartments.length === 0) {
+        tempDepartments = ["ALL"];
+      }
       await this.setState({
         departmentsFilterList: tempDepartments
       });
-      console.log('removed ' + department)
-    } else if (this.state.departmentsFilterList.length === 0) {
-      await this.setState({
-        departmentsFilterList: [department]
-      });
-      console.log('was empty; added ' + department)
+      console.log("removed " + department);
     } else {
       var tempDepartments: string[] = this.state.departmentsFilterList;
       tempDepartments.push(department);
       await this.setState({
         departmentsFilterList: tempDepartments
       });
-      console.log('added ' + department)
+      console.log("added " + department);
+      if (this.state.departmentsFilterList.includes("ALL")) {
+        this.handleDepartmentChange("ALL");
+      }
     }
-
-    this.props.updateDepartments(this.state.departmentsFilterList)
+    this.props.updateDepartments(this.state.departmentsFilterList);
   };
 
   handleCategoryChange = async (category: ICategories) => {
@@ -160,7 +157,12 @@ class SearchFilters extends React.Component<
   };
 
   render() {
-  return <div className='row'><div className="col-md-6">{this.showCategoryInput()}</div><div className="col-md-6">{this.showDepartmentInput()}</div></div>;
+    return (
+      <div className="row">
+        <div className="col-md-6">{this.showCategoryInput()}</div>
+        <div className="col-md-6">{this.showDepartmentInput()}</div>
+      </div>
+    );
   }
 }
 
