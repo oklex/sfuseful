@@ -4,6 +4,7 @@ import "./SearchList.scss";
 import SingleService from "../../components/Service/SingleService";
 import { Services } from "../../services/fetchServices";
 import SearchFilters from "./SearchFilters";
+import FiltersWrapper from "../../components/SidebarWrapper/SidebarWrapper";
 
 interface ISearchListState {
   data: IService[];
@@ -74,8 +75,8 @@ class SearchList extends React.Component<{}, ISearchListState> {
         var includesDepartment: boolean = true;
         this.state.departmentFilters.forEach(department => {
           if (
-            !service.departments.includes(department)
-            && !service.departments.includes("ALL")
+            !service.departments.includes(department) &&
+            !service.departments.includes("ALL")
           ) {
             includesDepartment = false;
           }
@@ -105,8 +106,13 @@ class SearchList extends React.Component<{}, ISearchListState> {
     return (
       <div>
         <div className="SearchList row">
-          <div className='filterBar col-sm-3'>
-            <SearchFilters updateCategories={this.updateCategoryFilters} updateDepartments={this.updateDepartmentFilters}/>
+          <div className="filterBar col-sm-3">
+            <FiltersWrapper>
+              <SearchFilters
+                updateCategories={this.updateCategoryFilters}
+                updateDepartments={this.updateDepartmentFilters}
+              />
+            </FiltersWrapper>
           </div>
           <div className="contentList col-sm-9">
             <h1 className="title">List here</h1>

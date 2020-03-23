@@ -35,7 +35,7 @@ class App extends React.Component<{}, {}> {
 
   render() {
     return (
-      <div className="App container">
+      <div className="App">
         <Router>
           <Helmet>
             <meta charSet="utf-8" />
