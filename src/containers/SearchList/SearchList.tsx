@@ -119,7 +119,7 @@ class SearchList extends React.Component<{}, ISearchListState> {
             </FiltersWrapper>
           </div>
           <div className="contentList col-sm-9">
-            <h1 className="title">List here</h1>
+            <h1 className="title">SFU Resources</h1>
             <div className="row">{this.showServices()}</div>
           </div>
         </div>

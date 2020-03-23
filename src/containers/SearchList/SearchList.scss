@@ -23,6 +23,16 @@
       padding-left: 30px;
       padding-bottom: 20px;
       // border-bottom: solid 15px $dark-grey;
+      .resetButton {
+        border-radius: 15px;
+        padding-top:0px;
+        padding-bottom:0px;
+        padding-left:10px;
+        padding-right:10px;
+        margin: 10px;
+        border: solid 1px $neutral-grey;
+        font-size: 12px;
+      }
       .selectionTitle {
         padding-top: 15px;
         padding-bottom: 5px;

@@ -172,11 +172,25 @@ class SearchFilters extends React.Component<
     this.props.updateCategories(this.state.categoriesFilterList);
   };
 
+  resetFilters = () => {
+    this.setState({
+      categoriesFilterList: [],
+      departmentsFilterList: ["ALL"]
+    });
+    this.props.updateCategories([]);
+    this.props.updateDepartments(["ALL"]);
+  };
+
   render() {
     return (
       <div className="row filterConents">
         <div className="col-lg-12">
-        <h2 className='selectionTitle redText'>Filters</h2>
+          <div className='d-flex justify-content-between'>
+            <h2 className="selectionTitle redText">Filters</h2>
+            <button className="resetButton" onClick={() => this.resetFilters()}>
+              Clear filters
+            </button>
+          </div>
           <h3 className="selectionTitle">Categories</h3>
           {this.showCategoryInput()}
         </div>
