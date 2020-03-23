@@ -7,6 +7,7 @@ import Contact from "../Contact/Contact";
 import SearchList from "../SearchList/SearchList";
 // import mockData from "../../data/mockData";
 import SuperNavigation from "../../components/Navigation/SuperNavigation";
+import SplashPageWrapper from "../../components/SplashPage/SplashPage";
 
 class App extends React.Component<{}, {}> {
   showServicesList = () => {
@@ -45,7 +46,7 @@ class App extends React.Component<{}, {}> {
             />
           </Helmet>
           {/* <SuperNavigation /> */}
-
+      <SplashPageWrapper/>
           <Switch>
             <Route exact path="/" component={this.showServicesList} />
             <Route exact path="/contact" component={this.showContact} />
