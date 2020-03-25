@@ -136,7 +136,7 @@
     "shortDescription": "Real time research help provided by the library.",
     "yearMinimum": "0",
     "yearMaximim": "4",
-    "source": "https://askaway.org/\n\nhttps://www.lib.sfu.ca/help/askaway-welcome",
+    "source": "https://askaway.org",
     "testimonials": "I was so happy when I discovered this service because it helped me when writing research paper. Through a chat service you get to speak with a qualified librarian and ask for their guidance researching a topic. They are great at getting you started on the right path. A must use resource for any student writing reserach papers."
   },
   {
@@ -234,7 +234,7 @@
     "shortDescription": "Link to all Software devices and licenses available for SFU students.",
     "yearMinimum": "0",
     "yearMaximim": "0",
-    "source": "https://www.sfu.ca/itservices/technical/software.html\n\nhttps://www.lib.sfu.ca/help/publish/dh/dhil/resources#tools-used-in-the-dhil \n",
+    "source": "https://www.sfu.ca/itservices/technical/software.html",
     "testimonials": "I am glad SFU is able to provide Microsoft Office Subscriptions for free, it is an essential tool for efficient leanring."
   },
   {
@@ -385,7 +385,7 @@
     "description": "Need a program checklist? Download a copy here and save yourself a visit to the academic advisor.",
     "shortDescription": "Create a Health Science program checklist.",
     "yearMaximim": "4",
-    "source": "http://www.sfu.ca/fhs/undergraduate/current/forms.html\n\n1. BA :   http://www.sfu.ca/content/dam/sfu/fhs/Undergraduate/Current/BA%20Checklist.pdf\n\n2. BSc - PQHS : http://www.sfu.ca/content/dam/sfu/fhs/Undergraduate/Current/Checklist%20-%20BSc%20PQHS%20-%20Summer%202019%20Calendar.pdf\n\n3. BSc- LS : http://www.sfu.ca/content/dam/sfu/fhs/Undergraduate/Current/BSc%20LS%20Checklist.pdf",
+    "source": "http://www.sfu.ca/fhs/undergraduate/current/forms.html",
     "testimonials": "Students go to advisor just to get a copy of the program requirement checklist, when I discovered I could download a copy online it made me very happy. The course checklist allows you to follow along and not miss any requirements."
   },
   {
@@ -406,7 +406,7 @@
     "accessMethod": "Online",
     "description": "Planning your classes? Use this handy tool to view what courses are being offered.",
     "shortDescription": "Coursys is a course planning tool.",
-    "source": "https://cas.sfu.ca/cas/login\n\nhttps://coursys.sfu.ca/browse/#!"
+    "source": "https://cas.sfu.ca/cas/login"
   },
   {
     "title": "Projected Course Offerings Computing Science",
@@ -479,7 +479,7 @@
     "shortDescription": "Gives tutorials on IT skills for each department.",
     "yearMinimum": "0",
     "yearMaximim": "4",
-    "source": "More Information: \nhttps://www.lib.sfu.ca/find/other-materials/lil-linkedin-learning\n\nhttps://databases.lib.sfu.ca/record/61245148240003610/LinkedIn-Learning-(LIL)",
+    "source": "https://www.lib.sfu.ca/find/other-materials/lil-linkedin-learning",
     "testimonials": "This was so helpful for me. Especially being in my last year at SFU, I have more of an idea of the career trajectory I want to pursue but felt like the required courses did not meet my passions. Accessing this platform allowed me to cater my learning goals and explore topics of interest further."
   },
   {
@@ -629,7 +629,7 @@
     "shortDescription": "Free one-on-one consultations to improve all around skills for students.",
     "yearMinimum": "0",
     "yearMaximim": "4",
-    "source": "https://www.lib.sfu.ca/about/branches-depts/slc\n\nDownloadable Material: \n\nHandouts from the SFU Student Learning Commons and other material\n\nConcentration (pdf):http://www.sfu.ca/content/dam/sfu/computing/Undergraduate_students/AEP-files/Concentration.pdf\n\nExamAnxiety (pdf): http://www.sfu.ca/content/dam/sfu/computing/Undergraduate_students/AEP-files/ExamAnxiety.pdf\n\nExamPreparation (pdf): http://www.sfu.ca/content/dam/sfu/computing/Undergraduate_students/AEP-files/ExamPreparation.pdf\n\nNoteTaking (pdf):http://www.sfu.ca/content/dam/sfu/computing/Undergraduate_students/AEP-files/NoteTaking.pdf\n\nMotivation (pdf): http://www.sfu.ca/content/dam/sfu/computing/Undergraduate_students/AEP-files/Motivation.pdf\n\nTimeManagement (pdf): http://www.sfu.ca/content/dam/sfu/computing/Undergraduate_students/AEP-files/TimeManagement.pdf\n\nProblemSolving (pdf): http://www.sfu.ca/content/dam/sfu/computing/Undergraduate_students/AEP-files/ProblemSolving.pdf\n\nProcrastination (pdf): http://www.sfu.ca/content/dam/sfu/computing/Undergraduate_students/AEP-files/Procrastination.pdf\n\nReading for University (pdf)http://www.sfu.ca/content/dam/sfu/computing/Undergraduate_students/AEP-files/ReadingforUniversity.pdf",
+    "source": "https://www.lib.sfu.ca/about/branches-depts/slc",
     "testimonials": "The writing center at the Student Learning Commons is great, If you have questions about quality of your work they can help a lot."
   },
   {
@@ -643,7 +643,7 @@
     "shortDescription": "Employement opportunities for students resistered in courses.",
     "yearMinimum": "0",
     "yearMaximim": "4",
-    "source": "https://www.sfu.ca/human-resources/prospective-employees/temporary-support/student-temporary-pool.html\n\nhttps://trr.tbe.taleo.net/trr01/ats/careers/v2/jobSearch?org=SIMOFRAS&cws=37"
+    "source": "https://www.sfu.ca/human-resources/prospective-employees/temporary-support/student-temporary-pool.html"
   },
   {
     "title": "Survey Monkey",
