@@ -1,12 +1,12 @@
 const fs = require("fs");
 const csvtojsonV2 = require("csvtojson/v2");
 const csvFilePath = "./src/data/List.csv";
-const fileName = "./src/data/data-march-18.json";
+const fileName = "./src/data/data-march-24.json";
 
 let csvToJson = require("convert-csv-to-json");
 
 let fileInputName = "./src/data/List.csv";
-let fileOutputName = "./src/data/data-march-18.json";
+let fileOutputName = "./src/data/data-march-24.json";
 
 console.log("starting conversion");
 
