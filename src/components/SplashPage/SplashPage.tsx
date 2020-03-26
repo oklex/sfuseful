@@ -39,14 +39,13 @@ class SplashPageWrapper extends React.Component<
     } else {
       return (
         <div className="splashPage">
-          <div className="heading d-flex justify-content-between">
-            <h1>SFUseful</h1>
+          <div className="heading d-flex flex-row-reverse">
             <button className="closeSplashBtn" onClick={() => this.turnOff()}>
               x
             </button>
           </div>
           <div className="content container">
-            <div className="col-md-6">
+            <div className="col-md-7">
               <h1>The easiest way to access your student benefits</h1>
               <p>
                 SFU has many resources that students can use to help them during

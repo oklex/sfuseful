@@ -19,7 +19,7 @@
     }
   }
   .content{
-    padding-top: 40vh;
+    padding-top: 25vh;
     text-align: left;
     h1 {
       line-height: 1.3em;
@@ -29,5 +29,14 @@
       border-radius: 15px;
       border: solid 1px $brand-red;
     }
+  }
+
+
+}
+
+
+@media only screen and (max-width: 720px) { 
+  .content {
+    padding-top: 20px !important;
   }
 }
