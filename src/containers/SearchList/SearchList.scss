@@ -1,11 +1,11 @@
 @import "../../styles/colours.scss";
 
-.filter {
-  padding-top: 40vh;
-}
+// .filter {
+//   padding-top: 40vh;
+// }
 
 .SearchList {
-  padding-top: 30px;
+  padding-top: 80px;
   .contentList {
     padding-left: 30px !important;
     padding-right: 30px !important;
@@ -18,7 +18,7 @@
     }
   }
   .filterBar {
-    padding-top: 15px;
+    // padding-top: 15px;
     .filterConents {
       overflow-y: auto;
       overflow-x: hidden;

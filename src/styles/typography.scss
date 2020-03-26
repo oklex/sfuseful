@@ -26,15 +26,18 @@ body {
   }
 
   h1 {
+    font-weight: 600;
     font-size: 30px;
     line-height: 30px + $basicLinePadding;
     color: $brand-red;
   }
   h2 {
+    font-weight: 600;
     font-size: 25px;
     line-height: 25px + $basicLinePadding;
   }
   h3 {
+    font-weight: 600;
     font-size: 20px;
     line-height: 20px + $basicLinePadding;
   }

@@ -45,7 +45,7 @@ class App extends React.Component<{}, {}> {
               content="width=device-width, initial-scale=1.0"
             />
           </Helmet>
-          {/* <SuperNavigation /> */}
+          <SuperNavigation />
           <SplashPageWrapper />
           <Switch>
             <Route exact path="/" component={this.showServicesList} />
