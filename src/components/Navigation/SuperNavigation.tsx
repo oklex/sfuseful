@@ -22,7 +22,7 @@ class SuperNavigation extends React.Component<{}, {}> {
           </div>
           <div className='links'>
             <span className="nav-item">
-              subscribe
+              <a href="https://www.sfu.ca/">SFU homepage</a>
             </span>
           </div>
         </div>
