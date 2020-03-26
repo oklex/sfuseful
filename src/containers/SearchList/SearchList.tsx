@@ -73,7 +73,7 @@ class SearchList extends React.Component<{}, ISearchListState> {
         return includesCategory;
       })
     });
-    this.filterDepartments();
+    await this.filterDepartments();
   };
 
   filterDepartments = async () => {

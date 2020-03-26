@@ -91,6 +91,7 @@ class SingleService extends React.Component<
   };
 
   render() {
+    console.log(this.props.service)
     if (this.state.hide) {
       return <div></div>;
     } else {
@@ -99,7 +100,8 @@ class SingleService extends React.Component<
         <div className="service">
           <a href={this.props.service.source} target="_blank">
             <h3>{service.title}</h3>
-            {this.showDescription()}
+            {/* {this.showDescription()} */}
+      <p> {this.props.service.shortDescription? this.props.service.shortDescription : ""}</p>
             <p className="smallText">Departments: {service.departments}</p>
             <p className="smallText">Categories: {this.getCategories()}</p>
           </a>

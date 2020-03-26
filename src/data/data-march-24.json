@@ -340,6 +340,7 @@
     "departments": "CS ENSC",
     "accessMethod": "In Person",
     "description": "High School Ambassadors are paid positions that represent the Faculty of Applied Sciences in recruitment and diversity initiatives. As an employee in this position, you will help inspire diverse prospective students in Gr. 11-12 about Applied Sciences through on campus events, tours, calling campaigns and high school visits.",
+    "shortDescription": "Become a high school ambassador.",
     "yearMinimum": "1",
     "yearMaximim": "1",
     "source": "http://www.sfu.ca/fas/current-student/advising/HSAP.html"
@@ -350,6 +351,7 @@
     "academicToolsAndHelp": true,
     "departments": "ALL",
     "accessMethod": "Online",
+    "shortDescription": "Program checklists for All Programs.",
     "description": "View your programs requirements here and save yourself a visit to the academic advisor.",
     "source": "https://www.sfu.ca/students/calendar/2020/summer/academic-programs.html"
   },
