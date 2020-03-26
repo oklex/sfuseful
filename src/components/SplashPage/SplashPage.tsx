@@ -45,13 +45,24 @@ class SplashPageWrapper extends React.Component<
               x
             </button>
           </div>
-          <div className='content'>
-            <h1>Learn what resources you have access to</h1>
-            <p>You're paying tuition after all!</p>
-          <br/>
-          <button className='actionBtn' onClick={() => this.turnOff()}>
-              Get started
-            </button>
+          <div className="content container">
+            <div className="col-md-6">
+              <h1>The easiest way to access your student benefits</h1>
+              <p>
+                SFU has many resources that students can use to help them during
+                their studies. The problem is that many students don’t know
+                about these resources until later in their degree. When this
+                happens resources go underutilized and students miss a full
+                range of services they are entitled to by paying their tuition
+                fees. Our project, SFUseful, is meant to create more awareness
+                among students and to encourage students to take advantage of
+                the many known resources currently available.
+              </p>
+              <br />
+              <button className="actionBtn" onClick={() => this.turnOff()}>
+                Get started
+              </button>
+            </div>
           </div>
         </div>
       );

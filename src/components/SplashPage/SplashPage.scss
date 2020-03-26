@@ -20,7 +20,10 @@
   }
   .content{
     padding-top: 40vh;
-    text-align: center;
+    text-align: left;
+    h1 {
+      line-height: 1.3em;
+    }
     .actionBtn {
       padding: 10px;
       border-radius: 15px;

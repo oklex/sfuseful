@@ -19,7 +19,7 @@ class SingleService extends React.Component<
     hide: false,
     readMore: false,
     shortDescription: this.props.service.description
-      ? this.props.service.description.slice(0, 200)
+      ? this.props.service.description
       : ""
   };
 
@@ -37,7 +37,7 @@ class SingleService extends React.Component<
           </button>
         </span>
       );
-    } else if (this.state.shortDescription.length > 200) {
+    } else if (this.state.shortDescription.length > 1000) {
       return (
         <span>
           <p>{this.state.shortDescription}...</p>
