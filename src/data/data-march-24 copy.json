@@ -346,6 +346,61 @@
     "source": "http://www.sfu.ca/fas/current-student/advising/HSAP.html"
   },
   {
+    "title": "Program checklists for All Programs",
+    "degreePlanning": true,
+    "academicToolsAndHelp": true,
+    "departments": "ALL",
+    "accessMethod": "Online",
+    "shortDescription": "Program checklists for All Programs.",
+    "description": "View your programs requirements here and save yourself a visit to the academic advisor.",
+    "source": "https://www.sfu.ca/students/calendar/2020/summer/academic-programs.html"
+  },
+  {
+    "title": "Program Checklist Beedie",
+    "degreePlanning": true,
+    "academicToolsAndHelp": true,
+    "departments": "BUS",
+    "accessMethod": "Online",
+    "description": "Need a program checklist? View the program requirements here and save yourself a visit to the academic advisor.",
+    "shortDescription": "Create a Business program checklist.",
+    "source": "https://www.sfu.ca/students/calendar/2020/summer/areas-of-study/business.html"
+  },
+  {
+    "title": "Program Checklist Engineering Science",
+    "degreePlanning": true,
+    "academicToolsAndHelp": true,
+    "departments": "ENSC",
+    "accessMethod": "Online",
+    "recommended": true,
+    "description": "Need a program checklist? View the program requirements here and save yourself a visit to the academic advisor.",
+    "shortDescription": "Create an Engineering program checklist.",
+    "source": "https://www.sfu.ca/content/dam/sfu/engineering/Undergraduate/4-year-curriculum-schedules/New_Curriculum/ENSC_COMPUTER_1137_Onwards_Planner.pdf",
+    "testimonials": "I graduated from computer engineering in 5 years with an average of 13 credits a semester. Utilize the resources available to you, and think about your future. An hour of planning can be the difference between surviving and thriving through University."
+  },
+  {
+    "title": "Program Checklists Health Science",
+    "degreePlanning": true,
+    "academicToolsAndHelp": true,
+    "departments": "HS",
+    "accessMethod": "Download,/Online",
+    "recommended": true,
+    "description": "Need a program checklist? Download a copy here and save yourself a visit to the academic advisor.",
+    "shortDescription": "Create a Health Science program checklist.",
+    "yearMaximim": "4",
+    "source": "http://www.sfu.ca/fhs/undergraduate/current/forms.html",
+    "testimonials": "Students go to advisor just to get a copy of the program requirement checklist, when I discovered I could download a copy online it made me very happy. The course checklist allows you to follow along and not miss any requirements."
+  },
+  {
+    "title": "Program Checklists Computing Science",
+    "degreePlanning": true,
+    "academicToolsAndHelp": true,
+    "departments": "CS",
+    "accessMethod": "Online",
+    "description": "Need a program checklist? View the program requirements here and save yourself a visit to the academic advisor.",
+    "shortDescription": "Create a Computing Science checklist.",
+    "source": "https://www.sfu.ca/students/calendar/2020/summer/areas-of-study/computing-science.html"
+  },
+  {
     "title": "CourSys",
     "degreePlanning": true,
     "academicToolsAndHelp": true,
